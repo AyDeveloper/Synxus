@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof of Address</title>
+    <link rel="stylesheet" href="/styles/proof.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+</head>
+<body>
+         <!-- header for logo and avatar -->
+    <header class="mainHeader">
+        <!-- headerCenter -->
+        <div class="headerCenter">
+            <!-- logo -->
+            <div class="logo">
+                <img src="/images/logo/synxus_figma.svg" alt="logo">
+            </div>
+            <!-- avatar -->
+            <div class="avatar">
+                <div class="imgBox">
+                    <img src="/images/logo/Ellipse 2.png" alt="Ellipse">
+                </div>
+                <div class="arrowImg">
+                    <img src="/images/logo/Vector (15).png" alt="Arrow">
+                </div>
+            </div>
+            <!-- end of avatar -->
+            <button class="toggleBtn" onclick="toggleMe()"><i class="fas fa-bars"></i></button> 
+        </div>
+    </header>   
+    <!-- end of header -->
+
+     <!-- dashboardToggle -->
+    <section class="dashboardToggle">
+        <button class="cancel" onclick="removeMe()"><i class="fas fa-times"></i></button>
+        <ul class="dashUlToggle">
+            <li class="overview"><img src="/images/crypto/Arrow 5.png" alt="arrow"> <a href="#">BACK TO OVERVIEW</a></li>
+            <li><img src="/images/biodata/Vector (9).png" alt=""><a href="biodata.html" target="_self">BIODATA</a></li>
+            <li><img src="/images/biodata/Vector (5).png" alt=""> <a href="account.html" target="_self">ACCOUNT</a></li>
+            <li><img src="/images/biodata/Vector (11).png" alt=""> <a href="identity.html" target="_self">IDENTITY</a></li>
+            <li><img src="/images/biodata/Vector (12).png" alt=""> <a href="selfie.html" target="_self">SELFIE</a></li>
+            <li class="active"><img src="/images/biodata/Vector (13).png" alt=""> <a href="poa.html" target="_self">PROOF OF ADDRESS</a></li>
+            <lI><img src="/images/biodata/Vector (14).png" alt=""> <a href="banktest.html" target="_self">BANK TEST AMOUNT</a></li>
+        </ul>
+    </section>
+    <!-- end of dashboardToggle -->
+
+    <!-- Main -->
+    <main class="mainContainer">
+        <!-- dashboard -->
+        <section class="dashboard">
+            <ul class="dashUl">
+                <li class="overview"><img src="/images/crypto/Arrow 5.png" alt="arrow"> <a href="#">BACK TO OVERVIEW</a></li>
+                <li><img src="/images/biodata/Vector (9).png" alt=""><a href="biodata.html" target="_self">BIODATA</a></li>
+                <li><img src="/images/biodata/Vector (5).png" alt=""> <a href="account.html" target="_self">ACCOUNT</a></li>
+                <li><img src="/images/biodata/Vector (11).png" alt=""> <a href="identity.html" target="_self">IDENTITY</a></li>
+                <li><img src="/images/biodata/Vector (12).png" alt=""> <a href="selfie.html" target="_self">SELFIE</a></li>
+                <li class="active"><img src="/images/biodata/Vector (13).png" alt=""> <a href="poa.html" target="_self">PROOF OF ADDRESS</a></li>
+                <lI><img src="/images/biodata/Vector (14).png" alt=""> <a href="banktest.html" target="_self">BANK TEST AMOUNT</a></li>
+            </ul>
+         </section>
+        <!-- end of dashboard -->
+
+        <!-- biodata container container -->
+        <section class="biodataContainer">
+            <!-- biodata content -->
+            <div class="biodataCnt">
+                <!-- text -->
+                <div class="text">
+                    <h3>Proof of Address</h3>
+                    <p>Choose your means of Proof of Address</p>
+                </div>
+                <!--End of text   -->
+            </div>
+            <!-- end of biodata content -->
+
+            <!-- biodata -->
+            <div class="biodataOtherInfo">
+                <!-- biodata other info -->
+                <div class="biodataOtherInfoOne">
+                       <!-- main form -->
+                       <form class="form">
+                           <div class="form1">
+                                <label for="selectType"> Select Type<br>
+                                        <select name="bank" id="select">
+                                            <option value="1" selected>LAWMA</option>
+                                            <option value="1">LASRAA</option>
+                                            <option value="1">Drivers License</option>
+                                        </select>
+                                </label>
+
+                                <label for="Date of birth"> Date of Birth<br>
+                                    <input type="datetime-local" name="dob" id="dob">
+                                </label>
+
+                            </div>
+                            <!-- form 2 -->
+                            <div class="form2">
+                                <label for="date of birth" class="upload"> Upload Document <span>*</span>  <br>
+                                    <input type="file" name="accounName" id="accounName" placeholder="Olatunde">
+                                </label>
+                                <label for="submit" class="submit">
+                                    <input type="submit" name="submit" id="submit" value="Submit & Continue">
+                                </label>
+                            </div>
+                        </form>
+                </div>
+                <!-- end of biodataOtherInfoOne -->
+            </div>
+            <!-- end of biodataOtherInfo -->
+        </section>
+        <!-- end of biodataContainer -->
+    </main>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer class="mainFooter">
+        <!-- footer center -->
+        <div class="footerCenter">
+            <!-- footer copyright -->
+            <div class="footerCnt">
+                <div class="copyRight">
+                    <p class="p">&copy; 2021 Synxus, All Right Reserved.</p>
+                </div>
+                <!-- end of footer copyright -->
+    
+                <!-- footer links -->
+                <div class="footerLinks">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <!-- end of footer links  -->
+    
+                <!-- footer social media links -->
+                <div class="footerSocialLinks">
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                       <img src="/images/socials/twitter.png" alt="twitter">
+                    </a>
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <img src="/images/socials/facebook.png" alt="facebook">
+                    </a>
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                     <img src="/images/socials/instagram.png" alt="instagram">
+                    </a>
+                    <!-- youtube -->
+                    <a href="#" class="youtube">
+                        <img src="/images/socials/youtube.png" alt="youtube">
+                    </a>
+                </div>
+                <!-- end of footer social media links -->
+            </div>
+        </div>
+        <!-- end of footer center -->
+    </footer>
+    <!-- end of footer -->
+
+     <!-- script -->
+    <script>
+            function toggleMe() {
+             const dashboardToggle = document.querySelector(".dashboardToggle");  
+             if (dashboardToggle.classList.contains("dashboardToggle") ) {
+                       dashboardToggle.classList.add("showdashboardToggle")
+                   } else {
+                       dashboardToggle.classList.remove("showdashboardToggle")
+                   }  
+           }
+    
+           function removeMe() {
+               const dashboardToggle = document.querySelector(".dashboardToggle");
+               dashboardToggle.classList.remove("showdashboardToggle")
+           }       
+    </script>
+    <!-- end of script -->
+    
+</body>
+</html>

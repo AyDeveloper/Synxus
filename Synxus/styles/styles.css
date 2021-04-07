@@ -1,0 +1,937 @@
+/*global  style*/
+@font-face {
+    src: url(/fonts/Roboto-Regular.ttf);
+    font-family: roboto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: roboto;
+}
+
+body {
+    position: relative;
+}
+
+/*mainHeader containing the logo and avatar*/
+.mainHeader {
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: .3rem;
+}
+
+/*header center*/
+.headerCenter {
+    width: 97%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;
+}
+
+.avatar {
+    visibility: hidden;
+}
+
+.toggleBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: transparent;
+    outline: none;
+}
+
+.toggleBtn i {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.dashboardToggle {
+    display: none;
+}
+
+.dashboard {
+    display: none;
+}
+
+.customerAccount {
+    display: flex;
+    flex-direction: column;
+}
+
+.account {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: .2rem;
+}
+
+.account .customerName {
+    background: #7826e0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    height: 90px;
+    padding: .7rem;
+    margin: 1.4rem auto;
+    border-radius: 15px;
+}
+
+.customerName h3   {
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.customerName .availBal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.customerName .availBal  p {
+    font-size: .88rem;
+}
+
+.customerName .availBal h3 {
+    font-size: 1.4rem;
+    padding-top: .1rem;
+}
+
+.customerName .availBal h3 span {
+font-size: .9rem;
+}
+
+.wholeBalance {
+    width: 90%;
+    margin: .2rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.BalContent {
+    background: transparent;
+    width: 330px;
+    padding: 2rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin: .8rem auto;
+}
+
+.BalContentCenter {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 2rem;
+}
+
+.BalContentCenter .currencyCnt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currencyCnt .naira {
+    background: #40bd14;
+    padding: .7rem;
+    border-radius: 50%;
+}
+
+.currencyCnt .convertPng {
+    background: blue;
+    padding: .7rem;
+    border-radius: 50%;
+}
+
+.currencyCnt .ethereumPng {
+    background: black;
+    padding: .7rem;
+    border-radius: 50%;
+}
+
+
+.BalContentCenter .currencyCnt h4 {
+    color: #7826e0;
+    font-size: 1rem;
+}
+
+.balFigure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.balFigure h4 {
+    font-size: 1.8rem;
+    color: #7826e0;
+}
+
+
+.balFigure p {
+    color: #7826e0;
+}
+
+.actionBtn {
+    display: flex;
+    flex-direction: row;
+}
+
+.actionBtn button {
+    text-align: center;
+    width: 110px;
+    height: 2.3rem;
+    border: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.actionBtn .deposit {
+    background: #7826e0;
+    color: white;
+}
+
+.actionBtn .withdrawal {
+    border:1px solid #7826e0;
+    margin-left: 1rem;
+    background: transparent;
+    color: #7826e0;
+}
+
+.input {
+    display: grid;
+    grid-template-rows: .2fr .2fr;
+    row-gap: .4rem;
+    align-content: center;
+}
+
+.inputType {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: .3rem
+}
+
+.inputType span {
+    width: 80px;
+    height: 2rem;
+    text-align: center;
+    padding: .4rem;
+    border: 1px solid rebeccapurple;
+}
+
+
+.inputType input {
+    width: 96%;
+    height: 2rem;
+    border: 1px solid rebeccapurple;
+    outline: none;
+    padding-left: .2rem;
+}
+
+.inputType input::placeholder {
+    padding-left: 1rem;
+}
+
+.actionBtnConvert .convert {
+    border: transparent;
+    background: #7826e0;
+    width: 100%;
+    padding: .7rem;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.customerOtherDetails {
+    width: 90%;
+    margin: .1rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 0;   
+}
+
+/*profile*/
+.profile{
+    display: grid;
+    grid-template-rows: .15fr .5fr;
+    border-radius: 20px;
+    margin: .1rem auto;
+    margin-bottom: 3rem;
+}
+
+/*profile head*/
+.profileHead {
+    color: #7826e0;
+    background: rgb(225, 221, 226);
+    padding: 1rem;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+    font-size: .9rem;
+}
+
+
+/*profile body*/
+.profileBody {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: .8rem;
+    padding: 1.5rem;
+    background: rgb(246, 242, 246);
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.17);
+}
+
+
+/*profile content*/
+.profileContent {
+    display: grid;
+    grid-template-columns: 1fr .3fr;
+    column-gap: 1rem;
+    grid-template-rows: auto;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: .8rem;
+}
+
+/*profileText*/
+.profileText {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: .3rem;
+}
+
+.profileText h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.profileText p {
+    font-size: .8rem;
+    opacity: .5;
+}
+
+.profileActionBtn {
+    background: #40bd14;
+    text-align: center;
+    width: 5rem;
+    height: 2.1rem;
+    padding: .7rem;
+    color: white;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-size: .7rem;
+}
+
+.profileActionBtn.notVerified {
+    background: #ff3900;
+}
+/*End of profile*/
+
+
+/*statistics*/
+.statistics{
+    background: #7826e0;
+    width:330px;
+    margin: .2rem auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+/*statistics center*/
+.statisticsCenter {
+    width: 90%;
+    margin: .1rem auto;
+    padding: 1rem;
+}
+
+.statsHeader h4 {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+
+.statsText {
+    display: grid;
+    grid-template-columns: .3fr 1fr auto;
+    grid-template-rows: auto;
+    padding: .7rem;
+    color: white;
+} 
+
+.statsText h3 {
+    font-size: .9rem;
+    font-weight: lighter;
+}
+
+/*end of statistics*/
+
+/*main Footer*/
+.mainFooter {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*footerCnt*/
+.footerCnt {
+    width: 90%;
+    margin: .2rem auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 2rem;
+}
+
+.copyRight {
+    text-align: center;
+}
+
+.footerLinks {
+    text-align: center;
+}
+
+.footerLinks ul li {
+    display: block;
+    padding: .3rem 0;
+}
+
+.footerLinks a {
+    color: black;
+}
+
+.footerSocialLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSocialLinks a {
+    margin:0 .5rem;
+}
+
+/*end of main footer*/
+
+
+/*navigation toggle*/
+
+.dashboardToggle {
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(151, 111, 161, 0.7), rgba(136, 113, 113, 0.8));
+    color:white;
+    z-index: 10;
+    opacity: 0;
+    transform: scale(0);
+    transition: .2s linear;
+}
+
+.showdashboardToggle{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.dashUlToggle {
+    width: 90%;
+    margin: .2rem auto;
+    margin-top: 3rem;
+}
+
+.dashUlToggle li {
+    display: block;
+    padding: 1rem;
+    background: white;
+}
+
+.dashboardToggle .dashUlToggle li:hover{
+    background: #f9f7fd;
+    border-left: 6px solid #7826e0;
+}
+
+
+.dashboardToggle li:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.dashboardToggle li:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.dashUlToggle li a {
+    color:#4a2081;
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+}
+
+.dashboardToggle .cancel {
+    position: absolute;
+    top:1.4rem;
+    right: 2rem;
+    background: transparent;
+    border: transparent;
+    outline:none;
+}
+
+.dashboardToggle .cancel i {
+    font-size: 1.3rem;
+    color: black;
+}
+
+/*end of nav toggle*/
+
+@media screen and (min-width:768px) {
+
+    .avatar {
+        visibility: visible;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        margin-top: 1rem;
+        justify-content: center;
+        margin-right:4rem;
+    }
+    
+    .avatar .imgBox {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .avatar img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+    }
+    
+    .avatar .arrowImg {
+        border: transparent;
+        background: transparent;
+        color: #333;
+        font-size: 1.5rem;
+        margin-left: .4rem;
+        cursor: pointer;
+    }
+
+    .toggleBtn {
+        margin-top: .4rem;
+    }
+
+    .account .customerName {
+        width: 700px;
+        margin-top: 1.5rem;
+        padding: 1.3rem;
+    }  
+    
+    
+.customerName h3   {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+
+.customerName .availBal  p {
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+.customerName .availBal h3 {
+    font-size: 1.9rem;
+    padding-top: .1rem;
+}
+
+.customerName .availBal h3 span {
+font-size: 1.2rem;
+}
+
+
+.wholeBalance {
+    width: 90%;
+    margin: .3rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.currencyCnt h4 {
+    font-size: 2.5rem;
+}
+
+.balFigure h4 {
+    font-size: 2rem;
+}
+
+.balFigure p {
+font-size: 1.4rem;
+}
+
+.customerOtherDetails {
+    width: 90%;
+    margin: .3rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 0;   
+}
+
+/*profile*/
+.profile{
+    margin-bottom: 3rem;
+    width: 550px;
+}
+
+.profileHead h3 {
+    font-size: 1.55rem;
+}
+
+
+.profileText h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.profileText p {
+    font-size: 1.1rem;
+    opacity: .6;
+}
+
+.profileActionBtn {
+    width: 7rem;
+    height: 2.5rem;
+    padding: .7rem;
+    font-size: 1.1rem;
+}
+
+/*End of profile*/
+
+
+/*statistics*/
+.statistics{
+    margin-bottom: 2rem;
+    width: 550px;
+}
+
+
+.statsHeader h4 {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.statsText h3 {
+    font-size: 1.35rem;
+    font-weight: lighter;
+}
+
+.statsText p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+/*end of statistics*/
+
+/*footer*/
+.copyRight {
+    font-size: 1.4rem;
+}
+
+
+.footerLinks a {
+    font-size: 1.4rem;
+}
+
+/*dashboard toggle*/
+
+
+.dashUlToggle {
+    width: 80%;
+    height: 100%;
+    margin-top: 5rem;
+}
+
+.dashUlToggle li {
+    padding: 1.5rem;
+}
+
+.dashboardToggle li:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.dashboardToggle li:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.dashUlToggle li a {
+    color:#4a2081;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.dashboardToggle .cancel {
+    top: 2.3rem;
+    right: 4.4rem;
+}
+
+.dashboardToggle .cancel i {
+    font-size: 1.5rem;
+    color:black;
+}
+
+}
+
+@media screen and (min-width:1024px) { 
+    .account .customerName {
+        width: 880px;
+    }  
+
+    .BalContent {
+        width: 400px;
+    }
+
+}
+
+
+@media screen and (min-width:1280px) {
+/*body*/
+.toggleBtn {
+    display: none;
+}
+
+body {
+    position: relative;
+    background: transparent;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.mainContainer {
+    width: 100%;
+    height: calc(100vh - 70px - 70px);
+    display:grid;
+    grid-template-columns: .2fr 1fr;
+    grid-template-rows: auto;
+}
+
+/*dashboard*/
+.dashboard {
+    display: block;
+    border-right: 2px solid whitesmoke;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .dashUl{
+    width: 100%;
+}
+
+.dashboard .dashUl li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.dashboard .dashUl li img {
+    margin-left: 4.5rem;
+}
+
+.dashboard .dashUl li a {
+    color: #350c69;
+    text-transform: uppercase;
+    overflow: auto;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    font-size: 16px;
+}
+
+
+.dashboard .dashUl li.active{
+    background: #f9f7fd;
+    border-left: 8px solid #7826e0;
+}
+
+/*customer account containing account balance and other customer details*/
+.customerAccount {
+    display:grid;
+    grid-template-columns: 1000px 300px;
+    column-gap: 3rem;
+    padding: 1rem 1rem;
+}
+
+.account {
+    height: 600px;
+    row-gap: unset;
+}
+
+.account .customerName {
+    width: 950px;
+    height: 99px;
+    margin: .1rem auto;
+    margin-top: 2rem;
+}
+
+.wholeBalance {
+    width: 100%;
+    height: 600px;
+}
+
+.BalContent {
+    background: transparent;
+    width: 450px;
+    padding: 1.3rem;
+    margin: 1.1rem auto;
+}
+.input {
+    row-gap: .5rem;
+}
+
+.inputType input {
+    width: 100%;
+}
+
+.customerOtherDetails {
+    width: auto;
+    margin: .3rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:.5rem auto;
+}
+
+
+/*profile*/
+.profile{
+    margin-bottom: 1rem;
+    width: 500px;
+}
+
+.profileHead h3 {
+    font-size: 1.3rem;
+}
+
+
+.profileText h4 {
+    font-size: 1.2rem;
+}
+
+.profileText p {
+    font-size: 1rem;
+    opacity: .5;
+}
+/*End of profile*/
+
+/*statistics*/
+.statistics{
+    width: 500px;
+    height: 220px;
+    padding: .15rem;
+    margin-bottom: unset;
+}
+
+
+/*statistics center*/
+.statisticsCenter {
+    padding: .1rem;
+}
+
+.statsHeader h4 {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+.statsText h3 {
+    font-size: 1.1rem;
+}
+
+.statsText p {
+    font-size: 1.1rem;
+}
+/*end of statistics*/
+
+/*main Footer*/
+.mainFooter {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*footerCnt*/
+.footerCnt {
+    width: 90%;
+    margin: .2rem auto;
+    display: grid;
+    grid-template-columns: auto .8fr auto;
+    grid-template-rows: auto;
+    padding: .4rem .4rem;
+    font-size: 1.2rem;
+}
+
+.copyRight p {
+    font-family:1.5rem;
+}
+
+.footerLinks ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2rem;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLinks ul li a {
+    color: #000;
+}
+
+/*footer social link*/
+.footerSocialLinks {
+    display: grid;
+    grid-template-columns: .18fr .18fr .18fr .18fr;
+    grid-template-rows: auto;
+}
+
+/*End of Footer*/
+
+}

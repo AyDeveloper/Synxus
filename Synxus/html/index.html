@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+</head>
+<body>
+    <!-- header for logo and avatar -->
+    <header class="mainHeader">
+        <!-- headerCenter -->
+        <div class="headerCenter">
+            <!-- logo -->
+            <div class="logo">
+                <img src="/images/logo/synxus_figma.svg" alt="logo">
+            </div>
+            <!-- avatar -->
+            <div class="avatar">
+                <div class="imgBox">
+                    <img src="/images/logo/Ellipse 2.png" alt="Ellipse">
+                </div>
+
+                <div class="arrowImg">
+                    <img src="/images/logo/Vector (15).png" alt="Arrow">
+                </div>
+            </div>
+            <!-- end of avatar -->
+             <button class="toggleBtn" onclick="toggleMe()"><i class="fas fa-bars"></i></button> 
+        </div>
+    </header>   
+    <!-- end of header -->
+
+    <!-- nav for toggle  -->
+    <section class="dashboardToggle">
+        <button class="cancel" onclick="removeMe()"><i class="fas fa-times"></i></button>
+        <ul class="dashUlToggle">
+            <li class="activeToggle"><img src="/images/icons/Vector.png" alt=""> <a href="index.html">Dashboard</a></li>
+            <li><img src="/images/icons/Vector (1).png" alt=""><a href="buy.html" target="_self">Buy And Sell</a></li>
+            <li><img src="/images/icons/Vector (2).png" alt=""> <a href="#">Wallet</a></li>
+            <li><img src="/images/icons/Vector (3).png" alt=""> <a href="#">Account</a></li>
+            <li><img src="/images/icons/Vector (4).png" alt=""> <a href="#">Transaction</a></li>
+            <li><img src="/images/icons/Vector (5).png" alt=""> <a href="#">Card</a></li>
+            <li><img src="/images/icons/Vector (6).png" alt=""> <a href="#">Balance</a></li>
+            <li><img src="/images/icons/Vector (7).png" alt=""><a href="#">Activities</a></li>
+        </ul>
+</section>
+  <!--end nav for toggle  -->
+    <!-- Main -->
+    <main class="mainContainer">
+        <!-- dashboard -->
+        <section class="dashboard">
+                <ul class="dashUl">
+                    <li class="active"><img src="/images/icons/Vector.png" alt=""> <a href="index.html">Dashboard</a></li>
+                    <li><img src="/images/icons/Vector (1).png" alt=""><a href="buy.html" target="_self">Buy And Sell</a></li>
+                    <li><img src="/images/icons/Vector (2).png" alt=""> <a href="#">Wallet</a></li>
+                    <li><img src="/images/icons/Vector (3).png" alt=""> <a href="#">Account</a></li>
+                    <li><img src="/images/icons/Vector (4).png" alt=""> <a href="#">Transaction</a></li>
+                    <li><img src="/images/icons/Vector (5).png" alt=""> <a href="#">Card</a></li>
+                    <li><img src="/images/icons/Vector (6).png" alt=""> <a href="#">Balance</a></li>
+                    <li><img src="/images/icons/Vector (7).png" alt=""><a href="#">Activities</a></li>
+                </ul>
+        </section>
+
+        <!-- customer account and details -->
+        <section class="customerAccount">
+            <!-- section containing balance and account -->
+            <div class="account">
+                    <div class="customerName">
+                            <h3>Hello Olatunji</h3>
+
+                            <div class="availBal">
+                                <p>Available Balance</p>
+                                <h3>345,974<span>NGN</span></h3>
+                            </div>
+                    </div>
+
+                    <!-- section showing crypto balance in naira -->
+                    <div class="wholeBalance">
+                        <!-- first balance content -->
+                        <div class="BalContent">
+                            <div class="BalContentCenter">
+                                <!-- naira -->
+                                <div class="currencyCnt">
+                                    <h4>Naira - <span>NGN</span></h4>
+                                    <img src="/images/icons/Group.png" alt="naira" class="naira">
+                                </div>
+                                <!-- balance figure -->
+                                <div class="balFigure">
+                                    <h4>0.00 <span>NGN</span></h4>
+                                    <p>Current Balance</p>
+                                </div>
+                                <!-- action button for deposit and withdrawal -->
+                                <div class="actionBtn">
+                                    <button class="deposit">Deposit</button>
+                                    <button class="withdrawal">Withdrawal</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- second balContent -->
+                        <div class="BalContent">
+                            <div class="BalContentCenter">
+                                <!-- convert -->
+                                <div class="currencyCnt">
+                                    <h4>Convert</h4>
+                                    <img src="/images/icons/Vector (8).png" alt="convertPng" class="convertPng">
+                                </div>
+                                <!-- input for conversion -->
+                                <div class="input">
+                                    <div class="usd inputType">
+                                       <span>USD</span>
+                                       <input type="number" name="usdInput" id="usdInput" placeholder="1">
+                                    </div>
+                                    <div class="naira inputType">
+                                       <span>Naira</span>
+                                       <input type="number" name="nairaInput" id="nairaInput" placeholder="451,000">
+                                    </div>
+                                </div>
+                                <!-- action button for conversion -->
+                                <div class="actionBtnConvert">
+                                    <button class="convert">Convert</button>
+                                </div>
+                            </div>
+                        </div>
+
+                             <!-- third balContent -->
+                             <div class="BalContent">
+                                <div class="BalContentCenter">
+                                    <!-- bitcoin -->
+                                    <div class="currencyCnt">
+                                        <h4>Bitcoin - <span>BTC</span></h4>
+                                        <img src="/images/icons/logos_bitcoin.png" alt="bitcoin">
+                                    </div>
+                                    <!-- balance figure -->
+                                    <div class="balFigure">
+                                        <h4>6.621000</h4>
+                                        <p>Current Balance</p>
+                                    </div>
+                                    <!-- action button for withdrawal and deposit -->
+                                    <div class="actionBtn">
+                                        <button class="deposit">Deposit</button>
+                                        <button class="withdrawal">Withdrawal</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fouth balContent -->
+                            <div class="BalContent">
+                                <div class="BalContentCenter">
+                                    <!-- ethereum -->
+                                    <div class="currencyCnt">
+                                        <h4>Ethereum - <span>ETH</span></h4>
+                                        <img src="/images/icons/Vector (9).png" alt="ethereum" class="ethereumPng">
+                                    </div>
+                                    <!-- balnce figure -->
+                                    <div class="balFigure">
+                                        <h4>23,015,95</h4>
+                                        <p>Current Balance</p>
+                                    </div>
+                                    <!-- action button for withdrawal and deposit -->
+                                    <div class="actionBtn">
+                                        <button class="deposit">Deposit</button>
+                                        <button class="withdrawal">Withdrawal</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <!-- end of  account -->
+
+            <!--  section containing profile and statistics -->
+            <div class="customerOtherDetails">
+                <!-- profile -->
+                <div class="profile">
+                        <div class="profileHead">
+                            <h3>Complete your Profile</h3>
+                        </div>
+                        <div class="profileBody">
+                            <!-- profileContent 1 -->
+                            <div class="profileContent">
+                                <div class="profileText">
+                                    <h4>Email verification</h4>
+                                    <p>Your email has ben verified</p>
+                                </div>
+
+                                <div  class="profileActionBtn">Verified</div>
+                            </div>
+                              <!-- profileContent 2 -->
+                            <div class="profileContent">
+                                <div class="profileText">
+                                    <h4>Add Bank Account</h4>
+                                    <p>Add a primary account </p>
+                                </div>
+
+                                <div class="profileActionBtn"> Verified</div>
+                            </div>
+                            <!-- profile content 3 -->
+                            <div class="profileContent">
+                                <div class="profileText">
+                                    <h4>Link your BVN</h4>
+                                    <p>Link BVN to your account </p>
+                                </div>
+
+                                <div class="profileActionBtn notVerified">Not Verified</div>
+                            </div>
+                             <!-- profile content 4 -->
+                             <div class="profileContent">
+                                <div class="profileText">
+                                    <h4>Add your Phone Number</h4>
+                                    <p>Add a phone number so we can reach you</p>
+                                </div>
+
+                                <div  class="profileActionBtn notVerified">Not Verified</div>
+                            </div>
+                        </div>
+                        <!-- end of profile content -->
+                 </div>
+                    <!-- end of profile -->
+
+                    <!-- statistics -->
+                    <div class="statistics">
+                        <div class="statisticsCenter">
+                            <div class="statsHeader">
+                                <h4>Statistics</h4>
+                            </div>
+                            <!-- statsContent -->
+                            <div class="statsContent">
+                                <!-- statsText 1-->
+                                <div class="statsText">
+                                    <img src="/images/icons/Vector (10).png" alt="walletBal">
+                                    <h3>Wallet Balance</h3>
+                                    <p>323</p>
+                                </div>
+                                <!-- statsText 2 -->
+                                <div class="statsText">
+                                    <img src="/images/icons/Vector (11).png" alt="paidPng">
+                                    <h3>Paid Transactions</h3>
+                                    <p>0</p>
+                                </div>
+                                 <!-- statsText 3 -->
+                                <div class="statsText">
+                                   <img src="/images/icons/Vector (12).png" alt="pendingIcon">
+                                    <h3>Pending Transactions</h3>
+                                    <p>4</p>
+                                </div>
+                                <!-- statsText 4 -->
+                                <div class="statsText">
+                                    <img src="/images/icons/Group 64.png" alt="declineIcon">
+                                    <h3>Declined Transactions</h3>
+                                    <p>0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of statistics center -->
+                    </div>
+                    <!-- end of statistics -->
+            </div>
+        </section>
+        <!-- end of customer account -->
+    </main>
+
+    <!-- footer -->
+    <footer class="mainFooter">
+        <!-- footer center -->
+        <div class="footerCenter">
+            <!-- footer copyright -->
+            <div class="footerCnt">
+                <div class="copyRight">
+                    <p class="p">&copy; 2021 Synxus, All Right Reserved.</p>
+                </div>
+                <!-- end of footer copyright -->
+    
+                <!-- footer links -->
+                <div class="footerLinks">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <!-- end of footer links  -->
+    
+                <!-- footer social media links -->
+                <div class="footerSocialLinks">
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                       <img src="/images/socials/twitter.png" alt="twitter">
+                    </a>
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <img src="/images/socials/facebook.png" alt="facebook">
+                    </a>
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                     <img src="/images/socials/instagram.png" alt="instagram">
+                    </a>
+                    <!-- youtube -->
+                    <a href="#" class="youtube">
+                        <img src="/images/socials/youtube.png" alt="youtube">
+                    </a>
+                </div>
+                <!-- end of footer social media links -->
+            </div>
+        </div>
+        <!-- end of footer center -->
+    </footer>
+    <!-- end of footer -->
+
+    <!-- script -->
+    <script>
+        function toggleMe() {
+            const dashboardToggle = document.querySelector(".dashboardToggle");
+                if (dashboardToggle.classList.contains("dashboardToggle")) {
+                    dashboardToggle.classList.add("showdashboardToggle")
+                } else {
+                    dashboardToggle.classList.remove("showdashboardToggle")
+                }   
+        }
+
+        function removeMe() {
+            const dashboardToggle = document.querySelector(".dashboardToggle");
+            dashboardToggle.classList.remove("showdashboardToggle")
+        }
+    </script>
+</body>
+</html>
+
+<!-- Peace Out -->
