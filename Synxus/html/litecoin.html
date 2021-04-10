@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litecoin Wallet</title>
+    <link rel="stylesheet" href="../styles/litecoin.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+</head>
+<body>
+         <!-- header for logo and avatar -->
+    <header class="mainHeader">
+        <!-- headerCenter -->
+        <div class="headerCenter">
+                <!-- logo -->
+                <div class="logo">
+                    <img src="..\images\logo\synxus_figma.svg" alt="logo">
+                </div>
+                <!-- avatar -->
+                <div class="avatar">
+                    <div class="imgBox">
+                        <img src="..\images\logo\Ellipse2.png" alt="Ellipse">
+                    </div>
+                    <div class="arrowImg">
+                        <img src="..\images\logo\Vector15.png" alt="Arrow">
+                    </div>
+                </div>
+                <!-- end of avatar -->
+                <button class="toggleBtn" onclick="toggleMe()"><i class="fas fa-bars"></i></button> 
+        </div>
+    </header>   
+    <!-- end of header -->
+
+    
+          <!-- dashboardToggle -->
+          <section class="dashboardToggle">
+            <button class="cancel" onclick="removeMe()"><i class="fas fa-times"></i></button>
+            <ul class="dashUlToggle">
+                <li class="overview"><img src="..\images\crypto\Arrow5.png" alt=""> <a href="#">BACK TO OVERVIEW</a></li>
+                <li><img src="..\images\crypto\Group.png" alt=""><a href="naira.html">NAIRA</a></li>
+                <li><img src="..\images\crypto\logos-bitcoin.png" alt=""> <a href="bitcoin.html" target="_self">BITCOIN</a></li>
+                <li><img src="..\images\crypto\Vector.png" alt=""> <a href="ethereum.html" target="_self">ETHEREUM</a></li>
+                <li><img src="..\images\crypto\Vector1.png" alt=""> <a href="xrp.html" target="_self">XRP</a></li>
+                <li class="active"><img src="..\images\crypto\Vector2.png" alt=""> <a href="litecoin.html" target="_self">LITECOIN</a></li>
+                <li><img src="..\images\crypto\Vector3.png" alt=""> <a href="dash.html" target="_self">DASH</a></li>
+            </ul>
+        </section>
+    <!-- end of dashboard Toggle -->
+
+
+    <!-- Main -->
+    <main class="mainContainer">
+        <!-- dashboard -->
+        <section class="dashboard">
+            <ul class="dashUl">
+                <li class="overview"><img src="..\images\crypto\Arrow5.png" alt=""> <a href="#">BACK TO OVERVIEW</a></li>
+                <li><img src="..\images\crypto\Group.png" alt=""><a href="naira.html">NAIRA</a></li>
+                <li><img src="..\images\crypto\logos-bitcoin.png" alt=""> <a href="bitcoin.html" target="_self">BITCOIN</a></li>
+                <li><img src="..\images\crypto\Vector.png" alt=""> <a href="ethereum.html">ETHEREUM</a></li>
+                <li><img src="..\images\crypto\Vector1.png" alt=""> <a href="xrp.html">XRP</a></li>
+                <li class="active"><img src="..\images\crypto\Vector2.png" alt=""> <a href="litecoin.html">LITECOIN</a></li>
+                <li><img src="..\images\crypto\Vector3.png" alt=""> <a href="dash.html">DASH</a></li>
+            </ul>
+        </section>
+        <!-- end of dashboard -->
+
+        <!-- wallet container -->
+        <section class="walletContainer">
+            <!-- wallet Balance -->
+            <div class="walletBalance">
+                <!-- text -->
+                <div class="text">
+                    <h3>Litecoin Wallet Balance</h3>
+                </div>
+                <!-- wallet balance content -->
+                <div class="walletBalCnt">
+                    <div class="balCnt">
+                        <h3>0.00<span>LTC</span></h3>
+                        <p>Current Balance</p>
+                    </div>
+                    <!-- wallet ballance btn -->
+                    <div class="balCntBtn">
+                        <button><img src="..\images\others\recieve.png" alt="recieve"> Receive</button>
+                        <button><img src="..\images\others\send.png" alt="send"> Send</button>
+                        <button><img src="..\images\others\Vector4.png" alt="buy"> Buy & Sell</button>
+                    </div>
+                    <!-- end of wallet balCntBtn -->
+                </div>
+                <!--End of wallet balance content  -->
+            </div>
+            <!-- end of wallet balance -->
+
+            <!-- walletOtherInfo -->
+            <div class="walletOtherInfo">
+                <!-- walletOtherInfoOne -->
+                <div class="walletOtherInfoOne">
+                    <!-- info1 -->
+                    <div class="info1">
+                        <h3>Receive LTC</h3>
+                    </div>
+                    <!-- basic info guide -->
+                    <div class="basicInfo">
+                            <div>
+                                <p>To fund your Synxus wallet from other wallet services or exchanges: </p>
+                                <p>1. Copy your Synxus wallet address shown below or scan the QR Code</p>
+                            </div>
+
+                        <div class="walletQR">
+                             <img src="..\images\others\QRCODE.png" alt="QR Code">
+                        </div>
+
+                        <div class="walletInfo">
+                            <input type="text" name="walletAddress" id="walletAddress" placeholder="weeeXdd34555uddQQQ00mmmm">
+                            <button><img src="..\images\others\Group1.png" alt="paste"></button>
+                            <button><img src="..\images\others\Vector6.png" alt="reload"></button>
+                        </div>
+
+                            <div>
+                                <p>2. Fill in the amount you want to deposit and confirmand send</p>
+                                <p>3. Once you complete sending, you can check the statis of your new deposit below</p>
+                            </div>
+
+                    </div>
+                </div>
+                <!-- end of walletOtherInfoOne -->
+
+                <!-- walletOtherInfoTwo  -->
+                <div class="walletOtherInfoTwo">
+                    <!-- text 1 -->
+                    <div class="txt">
+                        <h3>LITECOIN RECEIVING HISTORY</h3>
+                    </div>
+                    <!-- tet 2 -->
+                    <div class="txt2">
+                        <p>No history data yet</p>
+                    </div>
+                </div>
+                <!-- end of walletotherInfotwo -->
+            </div>
+            <!-- end of walletOtherinfo -->
+        </section>
+        <!-- end of wallet container -->
+    </main>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer class="mainFooter">
+        <!-- footer center -->
+        <div class="footerCenter">
+            <!-- footer copyright -->
+            <div class="footerCnt">
+                <div class="copyRight">
+                    <p class="p">&copy; 2021 Synxus, All Right Reserved.</p>
+                </div>
+                <!-- end of footer copyright -->
+    
+                <!-- footer links -->
+                <div class="footerLinks">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <!-- end of footer links  -->
+    
+                <!-- footer social media links -->
+                <div class="footerSocialLinks">
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                        <img src="..\images\socials\twitter.png" alt="twitter">
+                    </a>
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <img src="..\images\socials\facebook.png" alt="facebook">
+                    </a>
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                    <img src="..\images\socials\instagram.png" alt="instagram">
+                    </a>
+                    <!-- youtube -->
+                    <a href="#" class="youtube">
+                        <img src="..\images\socials\youtube.png" alt="youtube">
+                    </a>
+                </div>
+                <!-- end of footer social media links -->
+            </div>
+        </div>
+        <!-- end of footer center -->
+    </footer>
+    <!-- end of footer -->
+
+    <!-- script -->
+    <script>
+                function toggleMe() {
+                 const dashboardToggle = document.querySelector(".dashboardToggle");  
+                 if (dashboardToggle.classList.contains("dashboardToggle") ) {
+                           dashboardToggle.classList.add("showdashboardToggle")
+                       } else {
+                           dashboardToggle.classList.remove("showdashboardToggle")
+                       }  
+               }
+       
+               function removeMe() {
+                   const dashboardToggle = document.querySelector(".dashboardToggle");
+                   dashboardToggle.classList.remove("showdashboardToggle")
+               }       
+    </script>
+       <!-- end of script -->
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy and Sell</title>
+    <link rel="stylesheet" href="..\styles\buy.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+</head>
+<body>
+         <!-- header for logo and avatar -->
+    <header class="mainHeader">
+        <!-- headerCenter -->
+        <div class="headerCenter">
+            <!-- logo -->
+            <div class="logo">
+                <img src="..\images\logo\synxus_figma.svg" alt="logo">
+            </div>
+            <!-- avatar -->
+            <div class="avatar">
+                <div class="imgBox">
+                    <img src="..\images\logo\Ellipse2.png" alt="Ellipse">
+                </div>
+                <div class="arrowImg">
+                    <img src="..\images\logo\Vector15.png" alt="Arrow">
+                </div>
+            </div>
+            <!-- end of avatar -->
+            <button class="toggleBtn" onclick="toggleMe()"><i class="fas fa-bars"></i></button> 
+        </div>
+    </header>   
+    <!-- end of header -->
+
+        <!-- nav for toggle  -->
+        <section class="dashboardToggle">
+            <button class="cancel" onclick="removeMe()"><i class="fas fa-times"></i></button>
+            <ul class="dashUlToggle">
+                <li class="activeToggle"><img src="..\images\icons\Vector.png" alt=""> <a href="index.html">Dashboard</a></li>
+                <li><img src="..\images\icons\Vector1.png" alt=""><a href="buy.html" target="_self">Buy And Sell</a></li>
+                <li><img src="..\images\icons\Vector2.png" alt=""> <a href="#">Wallet</a></li>
+                <li><img src="..\images\icons\Vector3.png" alt=""> <a href="#">Account</a></li>
+                <li><img src="..\images\icons\Vector4.png" alt=""> <a href="#">Transaction</a></li>
+                <li><img src="..\images\icons\Vector5.png" alt=""> <a href="#">Card</a></li>
+                <li><img src="..\images\icons\Vector6.png" alt=""> <a href="#">Balance</a></li>
+                <li><img src="..\images\icons\Vector7.png" alt=""><a href="#">Activities</a></li>
+            </ul>
+    </section>
+      <!--end nav for toggle  -->
+
+    <!-- Main -->
+    <main class="mainContainer">
+        <!-- dashboard -->
+        <section class="dashboard">
+            <ul class="dashUl">
+                <li><img src="..\images\icons\Vector.png" alt=""> <a href="index.html">Dashboard</a></li>
+                <li class="active"><img src="..\images\icons\Vector1.png" alt=""><a href="buy.html" target="_self">Buy And Sell</a></li>
+                <li><img src="..\images\icons\Vector2.png" alt=""> <a href="#">Wallet</a></li>
+                <li><img src="..\images\icons\Vector3.png" alt=""> <a href="#">Account</a></li>
+                <li><img src="..\images\icons\Vector4.png" alt=""> <a href="#">Transaction</a></li>
+                <li><img src="..\images\icons\Vector5.png" alt=""> <a href="#">Card</a></li>
+                <li><img src="..\images\icons\Vector6.png" alt=""> <a href="#">Balance</a></li>
+                <li><img src="..\images\icons\Vector7.png" alt=""><a href="#">Activities</a></li>
+            </ul>
+        </section>
+
+        <!-- buy and sell , transaction history  section -->
+        <section class="mainBuySell">
+            <!-- section containing balance and account -->
+            <div class="buySell">
+                    <div class="text">
+                            <h3> You are selling your BTC @ &dollar; 360 per Dollar </h3>
+                    </div>
+
+                    <!-- section showing form about buy and sell -->
+                    <div class="buySellBody">
+                        <div class="buySellCenter">
+                            <!-- buySellCenter  -->
+                            <div class="buySellContent">
+                                <!-- buySellContent  -->
+                                <div class="buySellImg">
+                                        <img src="..\images\others\shop2.png" alt="shop">
+                                </div>
+                                <!-- info text -->
+                                <div class="infoText">
+                                    <h3>Buy and Sell Instantly</h3>
+                                    <p>Buy and Sell your cryptocurrency in less than a minute</p>
+                                </div>
+                                <!-- table content -->
+                                <div class="tableCnt">
+                                    <!-- buysell btn -->
+                                    <div class="buySellBtn">
+                                        <button class="activeBtn">BUY</button>
+                                        <button class="sell">SELL</button>
+                                    </div>
+                                    <!-- main form -->
+                                    <form class="mainForm">
+                                        <!-- form 1 -->
+                                        <div class="form1">
+                                            <div class="formCnt1">
+                                                <label for="">Currency to Buy</label>
+                                                <div>Bitcoin (BTC)</div>
+                                            </div>
+                                            <div  class="formCnt1">
+                                                <label for="">Buy with</label>
+                                                <div>Naira (NGN)</div>
+                                            </div>
+                                        </div>
+                                        <!-- form 2 -->
+                                        <div class="form2">
+                                            <div>
+                                               <label for="">Amount to spend</label>
+                                               <input type="number" name="" id="" placeholder="NGN  |"> 
+                                            </div>
+                                        </div>
+                                        <!-- form 3 -->
+                                        <div class="form3">
+                                            <div>
+                                               <label for="">Sell Option</label>
+                                               <select name="select1" id="select1">
+                                                   <option value="1" selected>External & Other Wallets </option>
+                                                   <option value="2" > Current Wallet </option>
+                                               </select>
+                                            </div>
+                                        </div>
+                                        <!-- form 4 -->
+                                        <div class="form4">
+                                            <div>
+                                               <label for="">Select Bank Account</label>
+                                               <select name="select2" id="select2">
+                                                   <option value="1" selected> Olatunji Ibrahim -01000000 - First Bank PLC </option>
+                                                   <option value="1" selected> Current Wallet </option>
+                                               </select>
+                                               <div class="addNewAccount">Add New Bank Account</div>
+                                            </div>
+                                        </div>
+                                        <!-- form 5 -->
+                                        <div class="form5">
+                                            <input type="submit" value="Submit">
+                                        </div>
+                                    </form>
+                                    <!-- end of form -->
+                                </div>
+                                <!-- end of table content -->
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- end of  buy and sell Body -->
+
+            <!--  section containing Account details  and transaction history -->
+            <div class="buySellOthers">
+                <!-- balance display  -->
+                <div class="balance">
+                        <div class="balanceBody">
+                            <h3>BTC Available </h3>
+
+                            <h3 class="bal"> 9 <span>BTC</span></h3>
+
+                            <div><span>&dollar;77,839</span>  |  <span>#15,877,389</span>  </div>
+                        </div>
+                 </div>
+                    <!-- end of balance display -->
+
+                    <!-- transaction history / summary -->
+                    <div class="transaction">
+                        <div class="transactionCenter">
+                            <div class="transactionHeader">
+                                <h4>Transaction Summary</h4>
+                            </div>
+                            <!-- transaction content -->
+                            <div class="transactionContent">
+                                <div class="tCnt">
+                                    <h3>BTC Rate</h3>
+                                    <p>1,000,000,000</p>
+                                </div>
+                                <div class="tCnt">
+                                    <h3>Base Amount</h3>
+                                    <p>#30,000,000</p>
+                                </div>
+                                <div class="tCnt">
+                                    <h3>Commission</h3>
+                                    <p>#384.00</p>
+                                </div>
+                                <div class="tCnt">
+                                    <h3>Transaction Fee</h3>
+                                    <p>338</p>
+                                </div>
+                            </div>
+                            <!-- end of transaction content -->
+                            
+                            <!-- total class -->
+                            <div class="totalClass">
+                                <div class="totalClassHeader">
+                                    <h3>Total</h3>
+                                    <p>#3350787.00</p>
+                                </div>
+
+                                <div class="totalClassCnt">
+                                    <div class="infoWallet">
+                                        <div class="imgText">
+                                            <img src="..\images\others\wallet1.png" alt="wallet"> 
+                                            <p>Sell From</p>
+                                        </div>
+                                        <h4>External & Other Wallets</h4>
+                                    </div>
+
+                                    <div class="infoWallet">
+                                        <div class="imgText">
+                                            <img src="..\images\others\wallet1.png" alt="wallet"> 
+                                            <p>Sell To</p>
+                                        </div>
+                                        <h4>Olatunji Ibrahim - First Bank PLC</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of total class -->
+                        </div>
+                        <!-- end of transaction center -->
+                    </div>
+                      <!-- End of transaction history / summary -->
+            </div>
+        </section>
+           <!-- End of buy and sell , transaction history  section -->
+    </main>
+
+    <!-- footer -->
+    <footer class="mainFooter">
+        <!-- footer center -->
+        <div class="footerCenter">
+            <!-- footer copyright -->
+            <div class="footerCnt">
+                <div class="copyRight">
+                    <p class="p">&copy; 2021 Synxus, All Right Reserved.</p>
+                </div>
+                <!-- end of footer copyright -->
+    
+                <!-- footer links -->
+                <div class="footerLinks">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <!-- end of footer links  -->
+    
+                <!-- footer social media links -->
+                <div class="footerSocialLinks">
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                       <img src="..\images\socials\twitter.png" alt="twitter">
+                    </a>
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <img src="..\images\socials\facebook.png" alt="facebook">
+                    </a>
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                     <img src="..\images\socials\instagram.png" alt="instagram">
+                    </a>
+                    <!-- youtube -->
+                    <a href="#" class="youtube">
+                        <img src="..\images\socials\youtube.png" alt="youtube">
+                    </a>
+                </div>
+                <!-- end of footer social media links -->
+            </div>
+        </div>
+        <!-- end of footer center -->
+    </footer>
+    <!-- end of footer -->
+
+    <!-- script -->
+    <script>
+        function toggleMe() {
+          const dashboardToggle = document.querySelector(".dashboardToggle");  
+          if (dashboardToggle.classList.contains("dashboardToggle") ) {
+                    dashboardToggle.classList.add("showdashboardToggle")
+                } else {
+                    dashboardToggle.classList.remove("showdashboardToggle")
+                }  
+        }
+
+        function removeMe() {
+            const dashboardToggle = document.querySelector(".dashboardToggle");
+            dashboardToggle.classList.remove("showdashboardToggle")
+        }
+
+      
+    </script>
+</body>
+</html>
